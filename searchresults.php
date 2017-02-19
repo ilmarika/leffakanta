@@ -41,8 +41,8 @@ session_start();
         <body>
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "!OpettajaEspooPekka";
+$username = "leffaread";
+$password = "!SalasanaLukuaVarten17";
 $dbname = "movies";
 $previous = $_SERVER['HTTP_REFERER'];
 // Create connection

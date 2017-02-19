@@ -27,8 +27,8 @@ if(isset($_COOKIE['username']) && isset ($_COOKIE['password'])) {
         } else {
         
             $servername = "localhost";
-            $username = "root";
-            $password = "!OpettajaEspooPekka";
+            $username = "leffawrite";
+            $password = "!SalasanaKirjoittamistaVarten17";
             $dbname = "movies";
 
             // Create connection

@@ -16,19 +16,15 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. */
 
-$user = 'admin';
-$pass = 'aad74af7a24d0c6e16a95657e9610954d5e7d909c83fc4b01abcfb674198dce9f928127d6688745e24f26c1b67fefd024e92af1fd5fa17b4feb478aa712b4384';
+//Checking if user has a necessary cookies
+include "cookieCheck.php";
+$cookiecheck = new cookieCheck();
 
-if(isset($_COOKIE['username']) && isset ($_COOKIE['password'])) {
-    
-    if (($_COOKIE['username'] != $user) || ($_COOKIE['password'] != $pass)) {
-            
-            header ("Location: login.php");
-        } else {
+if($cookiecheck->cookieCheck()) {
         
             $servername = "localhost";
-            $username = "root";
-            $password = "!OpettajaEspooPekka";
+            $username = "leffawrite";
+            $password = "!SalasanaKirjoittamistaVarten17";
             $dbname = "movies";
 
             // Create connection
@@ -38,7 +34,8 @@ if(isset($_COOKIE['username']) && isset ($_COOKIE['password'])) {
                 die("Connection failed: " . $conn->connect_error);
             } 
 
-
+            //Getting the data from the fields in addmovies.php and inserting them into the database
+        
             $name = mysqli_real_escape_string($conn, $_POST['name']);
             $year = mysqli_real_escape_string($conn, $_POST['year']);
             $cast = mysqli_real_escape_string($conn, $_POST['cast']);
@@ -61,8 +58,10 @@ if(isset($_COOKIE['username']) && isset ($_COOKIE['password'])) {
             }
 
             $conn->close();
-        }
 } else {
+    
+    //if user does not posess necessary cookies redirecring them to login page
+    
     header ("Location: login.php");
 }
 ?>

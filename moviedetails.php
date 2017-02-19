@@ -44,8 +44,8 @@ session_start();
 include "cookieCheck.php";
 
     $servername = "localhost";
-    $username = "root";
-    $password = "!OpettajaEspooPekka";
+    $username = "leffaread";
+    $password = "!SalasanaLukuaVarten17";
     $dbname = "movies";
     $cookiecheck = new cookieCheck();
     // Create connection

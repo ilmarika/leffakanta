@@ -52,8 +52,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         } else {
             
         $servername = "localhost";
-        $username = "root";
-        $password = "!OpettajaEspooPekka";
+        $username = "leffaread";
+        $password = "!SalasanaLukuaVarten17";
         $dbname = "movies";
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
